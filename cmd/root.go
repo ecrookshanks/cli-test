@@ -20,8 +20,12 @@ func init() {
 	//rootCmd.Flags().StringVarP(&Message, "message", "m", "", "Hello message to print.")
 }
 
-func Execute() {
-	if err := rootCmd.Execute(); err != nil {
+func GetCmd() *cobra.Command {
+	return rootCmd
+}
+
+func Execute(cmd *cobra.Command) {
+	if err := cmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}

@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	cmd.Execute()
+	runCmd := cmd.GetCmd()
+	cmd.Execute(runCmd)
 }
