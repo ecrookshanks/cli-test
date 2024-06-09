@@ -8,12 +8,12 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "default_command",
-	Short: "Default command that does nothing",
-	Long:  `Empty command`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hello World!")
-	},
+	Use:   "hello",
+	Short: "Hello program",
+	Long:  `hello`,
+	// Run: func(cmd *cobra.Command, args []string) {
+	// 	fmt.Println("Hello World!")
+	// },
 }
 
 func init() {
