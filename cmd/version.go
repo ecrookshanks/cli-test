@@ -18,3 +18,14 @@ var versionCmd = &cobra.Command{
 		fmt.Println("version 0.1.0")
 	},
 }
+
+func CreateVersionCmd(in string) *cobra.Command {
+	return &cobra.Command{
+		Use:   "version",
+		Short: "Print the version number of the app",
+		Long:  `All software has versions. This is mine.`,
+		Run: func(cmd *cobra.Command, args []string) {
+			fmt.Fprintf(cmd.OutOrStdout(), "version: %s", in)
+		},
+	}
+}
