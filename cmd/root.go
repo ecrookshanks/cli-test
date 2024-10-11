@@ -26,7 +26,7 @@ func GetCmd() *cobra.Command {
 
 func Execute(cmd *cobra.Command) {
 	if err := cmd.Execute(); err != nil {
-		fmt.Println(err)
+		fmt.Println("There was an error: " + err.Error())
 		os.Exit(1)
 	}
 }
